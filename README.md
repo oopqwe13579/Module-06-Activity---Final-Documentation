@@ -16,4 +16,4 @@ This project is a sample Thai Food Restaurant application that showcases a mobil
 - **Submit Button:** On the contact form, users can submit their contact details and feedback.
 
 ## Live Site
-You can access the live version of the project [here](https://username.github.io/module6project).
+You can access the live version of the project [here](http://sotd.us/kanitpongjaisiri/Mobile/Module_06/Kjaisiri_Module6Project_091324/Kjaisiri_Module6Project.html)).
