@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Sample App with Module5Lab Theme</title>
+    <!-- Link to the Module5Lab theme -->
+    <link rel="stylesheet" href="css/themes/css.css" />
+    <link rel="stylesheet" href="css/themes/css.min.css" />
+    <link rel="stylesheet" href="css/themes/jquery.mobile.icons.min.css" />
+    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile.structure-1.4.5.min.css" />
+    <!-- jQuery and jQuery Mobile JS -->
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+</head>
+<body>
+
+<!-- Main Page -->
+<div id="page" data-role="page" data-theme="a" data-add-back-btn="true">
+    <div data-role="header" data-theme="a">
+        <div class="logo">
+            <img src="Thai_food_Logo.jpeg" width="100" height="100" alt="Thai Restaurant Logo"/>
+        </div>
+        <h1><b>Thai Food Restaurant</b></h1>
+        <a href="#myPanel" class="ui-btn ui-btn-inline ui-corner-all ui-shadow ui-btn-icon-left ui-icon-bars" style="margin-top: 105px;">Open Panel</a>
+    </div>
+
+    <div data-role="panel" id="myPanel" data-display="overlay" data-theme="c">
+        <h2>Navigation Panel</h2>
+        <ul data-role="listview" data-inset="true">
+            <li><a href="#side1">Welcome Message and Introduction</a></li>
+            <li><a href="#side2">Special Offers or Promotions</a></li>
+            <li><a href="#side3">About Us</a></li>
+            <li><a href="#side4">Opening Hours and Location</a></li>
+            <li><a href="#side5">Contact Information</a></li>
+            <li><a href="#side6">Links to Social Media</a></li>
+            <li><a href="#side7">Testimonials or Reviews</a></li>
+            <li><a href="#side8">Menu Highlight</a></li>
+        </ul>
+        <p>You can close this panel by clicking outside of it, pressing the Esc key, or by swiping.</p>
+    </div>
+
+    <div data-role="content">
+        <!-- Main Navigation List -->
+        <ul data-role="listview" data-filter="true" data-inset="true" data-theme="a">
+            <li><a href="#section1">Appetizer</a></li>
+            <li><a href="#section2">Soups</a></li>
+            <li><a href="#section3">Salads</a></li>
+            <li><a href="#section4">Curries</a></li>
+            <li><a href="#section5">Stir-Fried Dishes</a></li>
+            <li><a href="#section6">Desserts</a></li>
+            <li><a href="#section7">Beverages</a></li>
+            <li><a href="#favorites">Favorites</a></li>
+            <li><a href="#contactForm">Contact Us</a></li>
+        </ul>
+    </div>
+
+    <div data-role="footer" data-theme="a">
+        <h4>Your App &copy; 20XX</h4>
+    </div>
+</div>
+
+<!-- New Grid Appetizer Section -->
+<div id="section1" data-role="page" data-theme="b" data-add-back-btn="true">
+    <div data-role="header" data-theme="b">
+        <a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-left ui-btn-c ui-toolbar-back-btn ui-icon-carat-l ui-btn-icon-left">Back</a>
+        <h1>Appetizer</h1>
+    </div>
+    <div data-role="content">
+        <p>This is a 5-column grid Appetizer menu categories:</p>
+        <div class="ui-grid-b">
+            <div class="ui-block-a"><div class="ui-bar ui-bar-c" style="height:60px">Spring Rolls (Por Pia Tod)</div></div>
+            <div class="ui-block-b"><div class="ui-bar ui-bar-c" style="height:60px">Chicken Satay (Satay Gai)</div></div>
+            <div class="ui-block-c"><div class="ui-bar ui-bar-c" style="height:60px">Papaya Salad (Som Tum)</div></div>
+            <div class="ui-block-a"><div class="ui-bar ui-bar-c" style="height:60px">Fish Cakes (Tod Mun Pla)</div></div>
+            <div class="ui-block-a"><div class="ui-bar ui-bar-c" style="height:60px">Crispy Fried Tofu (Tao Hoo Tod)</div></div>
+        </div>
+    </div>
+    <div data-role="footer" data-theme="b">
+        <h4>Footer for Grid Appetizer</h4>
+    </div>
+</div>
+
+<!-- Favorites Section -->
+<div id="favorites" data-role="page" data-theme="a" data-add-back-btn="true">
+    <div data-role="header" data-theme="a">
+        <a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-left ui-btn-a ui-toolbar-back-btn ui-icon-carat-l ui-btn-icon-left">Back</a>
+        <h1>Favorites</h1>
+    </div>
+    <div data-role="content">
+        <h3>Your Favorite Dishes</h3>
+        <ul id="favoritesList" data-role="listview" data-inset="true">
+            <!-- Favorite items will be displayed here -->
+        </ul>
+        <form id="favoritesForm">
+            <label for="favoriteItem">Add a Favorite Dish:</label>
+            <input type="text" name="favoriteItem" id="favoriteItem">
+            <input type="submit" value="Add to Favorites">
+        </form>
+    </div>
+    <div data-role="footer" data-theme="a">
+        <h4>Footer for Favorites</h4>
+    </div>
+</div>
+
+<!-- Section 7: Beverages -->
+<div id="section7" data-role="page" data-theme="c" data-add-back-btn="true">
+    <div data-role="header" data-theme="c">
+        <a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-left ui-btn-a ui-toolbar-back-btn ui-icon-carat-l ui-btn-icon-left">Back</a>
+        <h1>Beverages</h1>
+    </div>
+    <div data-role="content">
+        <!-- Filtered List with Icon -->
+        <ul data-role="listview" data-filter="true" data-inset="true">
+            <li data-icon="star"><a href="#">Thai Iced Tea</a></li>
+            <li><a href="#">Thai Iced Coffee</a></li>
+            <li><a href="#">Coconut Water</a></li>
+            <li><a href="#">Lemongrass Tea</a></li>
+        </ul>
+    </div>
+    <div data-role="footer" data-theme="c">
+        <h4>Footer for Beverages</h4>
+    </div>
+</div>
+
+<!-- Section 8: Contact Form -->
+<div id="contactForm" data-role="page" data-theme="a" data-add-back-btn="true">
+    <div data-role="header" data-theme="a">
+        <a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-left ui-btn-a ui-toolbar-back-btn ui-icon-carat-l ui-btn-icon-left">Back</a>
+        <h1>Contact Us</h1>
+    </div>
+    <div data-role="content">
+        <form id="userForm">
+            <label for="name">Name:</label>
+            <input type="text" name="name" id="name">
+
+            <label for="email">Email:</label>
+            <input type="email" name="email" id="email">
+
+            <label for="phone">Phone:</label>
+            <input type="tel" name="phone" id="phone">
+
+            <label for="dob">Date of Birth:</label>
+            <input type="date" name="dob" id="dob">
+
+            <label for="comments">Comments:</label>
+            <textarea name="comments" id="comments"></textarea>
+
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+    <div data-role="footer" data-theme="a">
+        <h4>Footer for Contact Form</h4>
+    </div>
+</div>
+
+<!-- Web Storage Script -->
+<script>
+    // Check if localStorage is available
+    function storageAvailable(type) {
+        try {
+            var storage = window[type],
+                x = '__storage_test__';
+            storage.setItem(x, x);
+            storage.removeItem(x);
+            return true;
+        } catch (e) {
+            return false;
+        }
+    }
+
+    $(document).on("pageinit", "#favorites", function() {
+        if (storageAvailable('localStorage')) {
+            // Load existing favorite items
+            loadFavorites();
+
+            // Save new favorite item
+            $('#favoritesForm').on('submit', function(event) {
+                event.preventDefault(); // Prevent default form submission
+                var favoriteItem = $('#favoriteItem').val();
+                if (favoriteItem) {
+                    saveFavorite(favoriteItem);
+                    $('#favoriteItem').val(''); // Clear the input field
+                }
+            });
+        } else {
+            alert('Local storage is not supported in this browser.');
+        }
+    });
+
+    function saveFavorite(item) {
+        var favorites = JSON.parse(localStorage.getItem('favorites')) || [];
+        favorites.push(item);
+        localStorage.setItem('favorites', JSON.stringify(favorites));
+        loadFavorites();
+    }
+
+    function loadFavorites() {
+        var favorites = JSON.parse(localStorage.getItem('favorites')) || [];
+        var favoritesList = $('#favoritesList');
+        favoritesList.empty(); // Clear the list
+        $.each(favorites, function(index, item) {
+            favoritesList.append('<li>' + item + '</li>').listview('refresh');
+        });
+    }
+</script>
+
+</body>
+</html>
